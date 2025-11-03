@@ -12,7 +12,7 @@ export const Avatar = {
     power: 95,
     stable: 74,
     penetrate: 65,
-    portable: 50,
-    stars: 6,
+    portable: 80,
+    stars: 4,
   },
 };

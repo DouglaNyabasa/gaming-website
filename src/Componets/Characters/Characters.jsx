@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Avatar } from "../../constants";
+import { Star } from "lucide-react";
 
 const Characters = () => {
   // tract the selected avatar
@@ -103,7 +104,75 @@ const Characters = () => {
 
           {/* avatar selection card */}
 
-          <div className=""></div>
+          <div className="grid grid-cols-2 gap-4">
+            {/* VIKI card */}
+            <div
+              className="relative bg-gray-900/70 flex backdrop-blur-sm rounded-lg border lg:flex-row flex-col p-3  justify-between px-12 items-center transition-all duration-300 cursor-pointer"
+              onClick={() => setSelectedAvatar("VIKI")}
+            >
+              <div className="text-lg mb-2">VIKI</div>
+
+              {/* Avatar visual placeholder */}
+
+              <div className="">
+                <img
+                  src="/images/VIKI.png"
+                  alt="VIKI-IMG"
+                  className="w-20 h-20 bg-gray-800/50 rounded-md flex items-center justify-center mb-2 "
+                />
+              </div>
+              {/* star ratings */}
+
+              <div className="flex ">
+                {[...Array(3)].map((_, i) => (
+                  <Star
+                    key={i}
+                    className="w-4 h-4 fill-violet-400 text-violet-500"
+                  />
+                ))}
+              </div>
+
+              {/* visual highlight for selected avatar  */}
+
+              {selectedAvatar === "VIKI" && (
+                <div className="absolute inset-0 border-2 rounded-lg pointer-events-none"></div>
+              )}
+            </div>
+
+            {/* Eva card */}
+            <div
+              className="relative bg-gray-900/70 flex backdrop-blur-sm rounded-lg border lg:flex-row flex-col p-3  justify-between px-12 items-center transition-all duration-300 cursor-pointer"
+              onClick={() => setSelectedAvatar("EVA")}
+            >
+              <div className="text-lg mb-2">EVA</div>
+
+              {/* Avatar visual placeholder */}
+
+              <div className="">
+                <img
+                  src="/images/EVA.png"
+                  alt="EVA-IMG"
+                  className="w-20 h-20 bg-gray-800/50 rounded-md flex items-center justify-center mb-2 "
+                />
+              </div>
+              {/* star ratings */}
+
+              <div className="flex ">
+                {[...Array(4)].map((_, i) => (
+                  <Star
+                    key={i}
+                    className="w-4 h-4 fill-violet-400 text-violet-500"
+                  />
+                ))}
+              </div>
+
+              {/* visual highlight for selected avatar  */}
+
+              {selectedAvatar === "EVA" && (
+                <div className="absolute inset-0 border-2 rounded-lg pointer-events-none"></div>
+              )}
+            </div>
+          </div>
         </div>
       </div>
     </div>
