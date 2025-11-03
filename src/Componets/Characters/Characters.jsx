@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Avatar } from "../../constants";
 import { Star } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 
 const Characters = () => {
   // tract the selected avatar
@@ -173,6 +174,39 @@ const Characters = () => {
               )}
             </div>
           </div>
+        </div>
+
+        {/* right side container */}
+        <div className="relative md:w-2/4 w-full md:h-full h-80 flex items-center justify-center overflow-hidden">
+         <AnimatePresence 
+         mode="wait"
+         >
+          {selectedAvatar === "VIKI" ? (
+            <motion.div
+            key="VIKI"
+            className="absolute inset-0"
+            initial={{x:"100%"}}
+            animate={{x: 0}}
+            exit={{x:"-100%"}}
+            transition={{duration:0.5}}
+            >
+                <img src="/images/VIKI.png" alt="" />
+            </motion.div>
+            
+          ):
+          <motion.div
+            key="EVA"
+            className="absolute inset-0"
+            initial={{x:"100%"}}
+            animate={{x: 0}}
+            exit={{x:"-100%"}}
+            transition={{duration:0.5}}
+            >
+                <img src="/images/EVA.png" alt="" />
+            </motion.div>
+          }
+          </AnimatePresence>
+
         </div>
       </div>
     </div>
