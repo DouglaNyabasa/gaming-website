@@ -17,7 +17,7 @@ const Header = () => {
         
     }
   return (
-    <header className="py-1 px-7 flex justify-between items-center fixed top-0 z-50 w-full border-b-[0.3px] border-[#babaff]">
+    <header className=" bg-black py-1 px-7 flex justify-between items-center sticky top-0 z-50 w-full border-b-[0.3px] border-[#babaff]">
       {/* left section */}
       <div className="flex lg:gap-14 gap-4 items-center">
         <img src="/images/logo.png" alt="" className="md:w-16 w-12" />
