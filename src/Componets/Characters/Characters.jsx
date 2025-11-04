@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Avatar } from "../../constants";
 import { Star } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import Spline from "@splinetool/react-spline";
 
 const Characters = () => {
   // tract the selected avatar
@@ -178,35 +179,31 @@ const Characters = () => {
 
         {/* right side container */}
         <div className="relative md:w-2/4 w-full md:h-full h-80 flex items-center justify-center overflow-hidden">
-         <AnimatePresence 
-         mode="wait"
-         >
-          {selectedAvatar === "VIKI" ? (
-            <motion.div
-            key="VIKI"
-            className="absolute inset-0"
-            initial={{x:"100%"}}
-            animate={{x: 0}}
-            exit={{x:"-100%"}}
-            transition={{duration:0.5}}
-            >
-                <img src="/images/VIKI.png" alt="" />
-            </motion.div>
-            
-          ):
-          <motion.div
-            key="EVA"
-            className="absolute inset-0"
-            initial={{x:"100%"}}
-            animate={{x: 0}}
-            exit={{x:"-100%"}}
-            transition={{duration:0.5}}
-            >
-                <img src="/images/EVA.png" alt="" />
-            </motion.div>
-          }
+          <AnimatePresence mode="wait">
+            {selectedAvatar === "VIKI" ? (
+              <motion.div
+                key="VIKI"
+                className="absolute inset-0"
+                initial={{ x: "100%" }}
+                animate={{ x: 0 }}
+                exit={{ x: "-100%" }}
+                transition={{ duration: 0.5 }}
+              >
+                <Spline scene="https://prod.spline.design/yjeUFODRh12iBynC/scene.splinecode" />
+              </motion.div>
+            ) : (
+              <motion.div
+                key="EVA"
+                className="absolute inset-0"
+                initial={{ x: "100%" }}
+                animate={{ x: 0 }}
+                exit={{ x: "-100%" }}
+                transition={{ duration: 0.5 }}
+              >
+                <Spline scene="https://prod.spline.design/43vEHvmMIKJ68V0C/scene.splinecode" />
+              </motion.div>
+            )}
           </AnimatePresence>
-
         </div>
       </div>
     </div>
