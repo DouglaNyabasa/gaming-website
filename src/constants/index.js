@@ -16,3 +16,21 @@ export const Avatar = {
     stars: 4,
   },
 };
+export const navLinks = [
+ {
+	id: "avatar",
+	title: "Avatar",
+ },
+ {
+	id: "arena",
+	title: "Arena",
+ },
+ {
+	id: "about",
+	title: "About US",
+ },
+ {
+	id: "shop",
+	title: "Shop",
+ },
+];

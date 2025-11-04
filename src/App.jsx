@@ -3,6 +3,7 @@ import Header from './Componets/Header/Header'
 import Hero from './Componets/Hero/Hero'
 import Characters from './Componets/Characters/Characters'
 import Areana from './Componets/Areana/Areana'
+import Footer from './Componets/Footer/Footer'
 
 const App = () => {
   return (
@@ -11,6 +12,7 @@ const App = () => {
       <Hero/>
       <Characters/>
       <Areana/>
+      <Footer/>
     </>
   )
 }
