@@ -46,7 +46,7 @@ const Areana = () => {
           </div>
         </div>
 
-        {/* right column takes 1/3 of the desktop screen */}
+        {/* right column takes 2/3 of the desktop screen */}
 
         <div className="md:col-span-2 space-y-4 md:space-y-6">
           {/* top row with 3 small cards */}
@@ -67,6 +67,45 @@ const Areana = () => {
                 Scoriox
               </h1>
             </div>
+            {/* Card 4 -FIRST SMALL CARD */}
+
+            <div className="relative overflow-hidden rounded-3xl border border-white aspect-square transform transition-transform duration-300 hover:scale-105">
+              <video
+                src="/videos/bento-card4.mp4"
+                className="w-full h-full object-cover "
+                autoPlay
+                loop
+                muted
+                playsInline
+              ></video>
+              <h1 className="absolute bottom-2 left-1/2 transform -translate-1/2 z-10 font-extrabold text-2xl">
+                Floralynx
+              </h1>
+            </div>
+
+            {/* Card 5 -FIRST SMALL CARD */}
+
+            <div className="relative overflow-hidden rounded-3xl border border-white aspect-square transform transition-transform duration-300 hover:scale-105">
+              <video
+                src="/videos/bento-card5.mp4"
+                className="w-full h-full object-cover "
+                autoPlay
+                loop
+                muted
+                playsInline
+              ></video>
+              <h1 className="absolute bottom-2 left-1/2 transform -translate-1/2 z-10 font-extrabold text-2xl">
+                Titanor
+              </h1>
+            </div>
+          </div>
+          {/* bottom large  */}
+
+          <div className="relative overflow-hidden rounded-3xl border border-white aspect-[16/9] md:col-span-2 transform transition-transform duration-300 hover:scale-[1.02]">
+            <img src="/images/bento-card5.png" alt="card-5" />
+            <button className="absolute h-16 w-full bg-black bg-opacity-70 bottom-0 text-2xl font-bold hover:text-yellow-400 transition-all duration-300 text-nowrap">
+              <i className="bxrds  bx-link-external"></i> Buy Now
+            </button>
           </div>
         </div>
       </div>
